@@ -1,0 +1,18 @@
+inference:
+    base_dir: ./
+    input_file: feedback_data.xlsx
+    output_file: feedback_data_pred.xlsx
+    feature_col: feedback
+    model: feedback_best_state_dict.pt
+    num_classes: 5
+    device: cpu
+training:
+    base_dir: ./
+    input_file: feedback_data.xlsx
+    feature_col: feedback
+    target_col: sentiment
+    epochs: 30
+    batch_size: 16
+    model_name: feedback
+    device: cuda
+    num_classes: 5

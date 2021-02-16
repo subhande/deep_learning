@@ -1,0 +1,41 @@
+{
+  "train_batch_size": 4,
+  "steps_per_print": 2000,
+  "optimizer": {
+    "type": "Adam",
+    "params": {
+      "lr": 0.001,
+      "betas": [
+        0.8,
+        0.999
+      ],
+      "eps": 1e-8,
+      "weight_decay": 3e-7
+    }
+  },
+  "scheduler": {
+    "type": "WarmupLR",
+    "params": {
+      "warmup_min_lr": 0,
+      "warmup_max_lr": 0.001,
+      "warmup_num_steps": 1000
+    }
+  },
+  "wall_clock_breakdown": false,
+  "custom_params": {
+      "base_dir": "./",
+      "root_df": "df_final.csv",
+      "train_df": "train.csv",
+      "val_df": "val.csv",
+      "data_path": "./big_model_vectors",
+      "batch_size": 32,
+      "epochs": 5,
+      "in_features": 512,
+      "intemediate_features": 128,
+      "patience": 5,
+      "save_interval": 5,
+      "model_name": "fashion",
+      "device": "cuda"
+
+  }
+}
