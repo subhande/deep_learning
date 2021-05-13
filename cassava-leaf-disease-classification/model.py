@@ -13,7 +13,7 @@ import torch.nn as nn
 
 import torchvision
 
-form sklearn import metrics, model_selection
+from sklearn import metrics, model_selection
 
 
 # %matplotlib inline
